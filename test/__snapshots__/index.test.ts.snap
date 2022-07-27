@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`transform > v-model 1`] = `
+"<template>
+  <div>
+    <a-input v-model=\\"name\\"></a-input>
+    <a-input :test.sync=\\"name\\"></a-input>
+    <a-input :test1.sync=\\"name\\"></a-input>
+  </div>
+</template>
+
+<script lang=\\"ts\\" setup>
+const name = ref('')
+</script>"
+`;

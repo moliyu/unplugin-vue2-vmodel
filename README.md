@@ -1,15 +1,13 @@
 # unplugin-starter
 
-[![NPM version](https://img.shields.io/npm/v/unplugin-starter?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-starter)
+[![NPM version](https://img.shields.io/npm/v/unplugin-starter?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-vue2-vmodel)
 
-Starter template for [unplugin](https://github.com/unjs/unplugin).
-
-## Template Usage
+## Usage
 
 To use this template, clone it down using:
 
 ```bash
-npx degit antfu/unplugin-starter my-unplugin
+npm install unplugin-vue2-vmodel
 ```
 
 And do a global replace of `unplugin-starter` with your plugin name.
@@ -30,16 +28,16 @@ npm i unplugin-starter
 
 ```ts
 // vite.config.ts
-import Starter from 'unplugin-starter/vite'
+import Vmodel from 'unplugin-vue2-vmodel/vite'
 
 export default defineConfig({
   plugins: [
-    Starter({ /* options */ }),
+    Vmodel({ /* options */ }),
   ],
 })
 ```
 
-Example: [`playground/`](./playground/)
+<!-- Example: [`playground/`](./playground/) -->
 
 <br></details>
 
@@ -48,11 +46,11 @@ Example: [`playground/`](./playground/)
 
 ```ts
 // rollup.config.js
-import Starter from 'unplugin-starter/rollup'
+import Vmodel from 'unplugin-vue2-vmodel/rollup'
 
 export default {
   plugins: [
-    Starter({ /* options */ }),
+    Vmodel({ /* options */ }),
   ],
 }
 ```
@@ -68,7 +66,7 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-starter/webpack')({ /* options */ })
+    require('unplugin-vue2-vmodel/webpack')({ /* options */ })
   ]
 }
 ```
@@ -82,7 +80,7 @@ module.exports = {
 // nuxt.config.js
 export default {
   buildModules: [
-    ['unplugin-starter/nuxt', { /* options */ }],
+    ['unplugin-vue2-vmodel/nuxt', { /* options */ }],
   ],
 }
 ```
@@ -99,7 +97,7 @@ export default {
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-starter/webpack')({ /* options */ }),
+      require('unplugin-vue2-vmodel/webpack')({ /* options */ }),
     ],
   },
 }
@@ -113,10 +111,10 @@ module.exports = {
 ```ts
 // esbuild.config.js
 import { build } from 'esbuild'
-import Starter from 'unplugin-starter/esbuild'
+import Vmodel from 'unplugin-vue2-vmodel/esbuild'
 
 build({
-  plugins: [Starter()],
+  plugins: [Vmodel()],
 })
 ```
 
