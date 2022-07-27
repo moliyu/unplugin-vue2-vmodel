@@ -3,7 +3,7 @@ import type { Options } from './types'
 import { transform } from './core'
 export * from './core'
 
-export default createUnplugin<Options>(options => ({
+export default createUnplugin<Options>(() => ({
   name: 'unplugin-starter',
   transformInclude(id) {
     return id.endsWith('.vue')

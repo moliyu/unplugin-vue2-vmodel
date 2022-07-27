@@ -10,12 +10,35 @@ To use this template, clone it down using:
 npm install unplugin-vue2-vmodel
 ```
 
-And do a global replace of `unplugin-starter` with your plugin name.
+## before
+```vue
+<script lang="ts" setup>
+const name = ref('')
+</script>
 
-Then you can start developing your unplugin 🔥
+<template>
+  <div>
+    <a-input v-model:value="name" />
+    <a-input v-model:test="name" />
+    <a-input v-model:test1 ="name" />
+  </div>
+</template>
+```
 
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+## after
+```vue
+<script lang="ts" setup>
+const name = ref('')
+</script>
+
+<template>
+  <div>
+    <a-input v-model="name" />
+    <a-input :test.sync="name" />
+    <a-input :test1.sync="name" />
+  </div>
+</template>
+```
 
 ## Install
 
